@@ -1,0 +1,126 @@
+/* Ensures all elements start with a clean slate */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-image: url('../Images/Home Page Background2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100vw;
+}
+
+/* Header container adjustments */
+.Header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #ffffff;
+    width: 100%;
+    position: fixed;         /* Keeps the header at the top of the page */
+    top: 0;
+    left: 0;
+    z-index: 1000;           /* Ensures header appears on top */
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
+}
+
+/* Logo container adjustments for alignment */
+.logo {
+    display: flex;
+    align-items: center;         /* Aligns image and title horizontally */
+}
+
+/* Image styling to adjust size if necessary */
+.logo img {
+    width: 100px;                /* Adjust width as needed */
+    height: auto;               /* Maintains aspect ratio */
+    margin-right: -1rem;         /* Space between image and title */
+}
+
+/* Title and slogan container styling */
+.title-slogan {
+    display: flex;
+    flex-direction: column;    /* Stacks h1 and h2 vertically */
+}
+
+/* H1 and slogan styles */
+.logo h1 {
+    font-size: 32px;
+    font-weight: 600;
+    color: #6a0dad;
+    margin: 0;
+
+}
+
+.slogan {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: brown;
+    margin-top: 2px;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+}
+
+/* Navbar styling */
+.navbar {
+    display: flex;                       /* Aligns nav items horizontally */
+}
+
+/* Navbar items styling */
+.main-menu ul {
+    display: flex;                       /* Horizontally aligns list items */
+    gap: 15px;                           /* Reduces space between nav items */
+    list-style-type: none;               /* Removes bullets from list */
+    margin: 0;                           /* Removes default margin */
+    padding: 0;                          /* Removes default padding */
+}
+
+/* Navbar link styling */
+.main-menu ul li a {
+    display: flex;                       /* Aligns icon and text side by side */
+    align-items: center;                 /* Centers icon with text vertically */
+    color: #333;                         /* Text color for links */
+    text-decoration: none;               /* Removes underline from links */
+    padding: 5px 10px;                   /* Reduces padding around links */
+    transition: color 0.3s ease;         /* Smooth transition for text color */
+    font-size: 14px;                     /* Slightly smaller font size */
+    gap: 5px;                            /* Reduces space between icon and text */
+}
+
+/* Icon styling */
+.main-menu ul li a i {
+    font-size: 16px;                     /* Adjusts icon size */
+    color: inherit;                      /* Inherit link color for icons */
+    transition: color 0.3s ease;         /* Smooth transition for icon color */
+}
+
+/* Button styling for Sign Up */
+.main-menu ul li a.btn {
+    background-color: #6a0dad;           /* Set background color for button */
+    color: #ffffff;                      /* Button text color */
+    padding: 5px 12px;                   /* Reduces padding for button */
+    border-radius: 3px;                  /* Slightly rounded corners */
+    font-weight: 500;                    /* Semi-bold for prominence */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+}
+
+/* Hover Effects */
+.main-menu ul li a:hover {
+    color: #6a0dad;                      /* Text color on hover */
+}
+
+.main-menu ul li a i:hover {
+    color: #6a0dad;                      /* Icon color on hover */
+}
+
+.main-menu ul li a.btn:hover {
+    background-color: #590c94;           /* Darker background color for button on hover */
+}
