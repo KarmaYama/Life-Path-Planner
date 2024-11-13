@@ -57,7 +57,6 @@ body {
     font-weight: 600;
     color: #6a0dad;
     margin: 0;
-
 }
 
 .slogan {
@@ -109,7 +108,7 @@ body {
     padding: 5px 12px;                   /* Reduces padding for button */
     border-radius: 3px;                  /* Slightly rounded corners */
     font-weight: 500;                    /* Semi-bold for prominence */
-    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    transition: background-color 0.7s ease, color 0.3s ease; /* Smooth transition */
 }
 
 /* Hover Effects */
@@ -123,4 +122,80 @@ body {
 
 .main-menu ul li a.btn:hover {
     background-color: #590c94;           /* Darker background color for button on hover */
+}
+
+/* ------------------------------ */
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;  /* Stacks logo, title, and navbar vertically on small screens */
+        align-items: center;     /* Centers header content */
+    }
+
+    /* Stack logo and title vertically */
+    .logo {
+        flex-direction: column;  /* Stacks logo and title vertically */
+        align-items: center;     /* Centers logo and title */
+        margin-bottom: 10px;      /* Adds space between logo/title and navbar */
+    }
+
+    .logo img {
+        width: 80px;             /* Reduces logo size */
+        margin-bottom: 10px;      /* Adds spacing between image and title */
+    }
+
+    .logo h1 {
+        font-size: 28px;         /* Reduces font size for title */
+    }
+
+    .slogan {
+        font-size: 14px;         /* Adjusts font size for the slogan */
+    }
+
+    .navbar {
+        flex-direction: column;  /* Stack navbar links vertically */
+        align-items: center;     /* Centers navbar links */
+    }
+
+    /* Adjust navbar links */
+    .main-menu ul {
+        display: flex;
+        flex-direction: column;  /* Stack navbar items vertically */
+        gap: 10px;               /* Space between items */
+    }
+
+    .main-menu ul li a {
+        font-size: 14px;         /* Adjust font size for smaller screens */
+        padding: 8px 10px;       /* Adjust button padding */
+    }
+
+    .main-menu ul li a.btn {
+        font-size: 14px;         /* Adjust button font size */
+        padding: 8px 12px;       /* Adjust padding for buttons */
+    }
+}
+
+/* ------------------------------ */
+/* Mobile Responsiveness for Very Small Screens */
+@media (max-width: 480px) {
+    .logo img {
+        width: 70px;             /* Further reduces logo size */
+    }
+
+    .logo h1 {
+        font-size: 24px;         /* Further reduces font size */
+    }
+
+    .slogan {
+        font-size: 12px;         /* Further reduces slogan font size */
+    }
+
+    .main-menu ul li a {
+        font-size: 12px;         /* Reduces link font size for small screens */
+    }
+
+    .main-menu ul li a.btn {
+        font-size: 12px;         /* Reduces button font size for small screens */
+        padding: 8px 10px;       /* Adjust padding for buttons */
+    }
 }

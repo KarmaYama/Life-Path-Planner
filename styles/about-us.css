@@ -15,6 +15,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
+    color: #333; /* Default text color */
 }
 
 /* Header container adjustments */
@@ -31,7 +32,6 @@ body {
     z-index: 1000;           /* Ensures header appears on top */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
-
 
 /* Logo container adjustments for alignment */
 .logo {
@@ -152,4 +152,55 @@ body {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Accessibility focus styles */
+a:focus, button:focus {
+    outline: 3px solid #6a0dad; /* Adds visible focus style for keyboard users */
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .Header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .logo img {
+        width: 80px;
+        margin-right: 0;
+    }
+
+    .main-menu ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .main-menu ul li a {
+        padding: 8px 15px;
+    }
+
+    .about-content p {
+        font-size: 16px;
+        max-width: 95%;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo h1 {
+        font-size: 28px;
+    }
+
+    .slogan {
+        font-size: 14px;
+    }
+
+    .main-menu ul {
+        gap: 10px;
+    }
+
+    .main-menu ul li a {
+        font-size: 12px;
+        padding: 6px 10px;
+    }
 }

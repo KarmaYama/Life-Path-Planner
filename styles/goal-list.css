@@ -5,6 +5,7 @@
     padding: 0;
 }
 
+/* Body styling */
 body {
     font-family: 'Montserrat', sans-serif;
     font-size: 16px;
@@ -15,6 +16,7 @@ body {
     background-repeat: no-repeat;
     height: 100vh;
     width: 100vw;
+    overflow-x: hidden;  /* Prevent horizontal scrolling */
 }
 
 /* Header container adjustments */
@@ -31,7 +33,6 @@ body {
     z-index: 1000;           /* Ensures header appears on top */
     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Adds subtle shadow */
 }
-
 
 /* Logo container adjustments for alignment */
 .logo {
@@ -152,4 +153,38 @@ body {
     line-height: 1.6;
     max-width: 800px;
     margin: 0 auto;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    /* Navbar stacking for mobile */
+    .navbar {
+        flex-direction: column;  /* Stacks navbar items vertically */
+        align-items: center;
+    }
+
+    .main-menu ul {
+        flex-direction: column;  /* Stack menu items vertically */
+        gap: 10px;                /* Adjust gap for smaller screens */
+    }
+
+    /* Adjust navbar link styling for mobile */
+    .main-menu ul li a {
+        font-size: 16px;          /* Slightly larger font for easier readability */
+        padding: 10px 15px;       /* Add more padding for touch targets */
+    }
+
+    /* Adjust About section for mobile */
+    .about-content h1 {
+        font-size: 28px;          /* Smaller font size for mobile */
+    }
+
+    .about-content p {
+        font-size: 16px;          /* Adjust paragraph size */
+        line-height: 1.5;         /* Adjust line height for readability */
+    }
+
+    .logo img {
+        width: 80px;              /* Smaller logo for mobile */
+    }
 }
